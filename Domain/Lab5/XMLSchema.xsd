@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="collection">
+    <xs:complexType>
+      <xs:sequence minOccurs="1">
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Domain.Lab1.Hdd">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Interface" />
+              <xs:element type="xs:long" name="Capacity" />
+              <xs:element type="xs:double" name="RecordingSpeed" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Domain.Lab1.DataStorage">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:long" name="Capacity" />
+              <xs:element type="xs:double" name="RecordingSpeed" />
+              <xs:any minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Domain.Lab1.Cd">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:double" name="Diameter" />
+              <xs:element type="xs:long" name="Capacity" />
+              <xs:element type="xs:double" name="RecordingSpeed" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

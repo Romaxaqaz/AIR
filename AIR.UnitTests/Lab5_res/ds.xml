@@ -1,0 +1,32 @@
+<collection>
+  <Domain.Lab1.Cd>
+    <Diameter>33</Diameter>
+    <Capacity>192</Capacity>
+    <RecordingSpeed>39</RecordingSpeed>
+  </Domain.Lab1.Cd>
+  <Domain.Lab1.Cd>
+    <Diameter>15</Diameter>
+    <Capacity>77</Capacity>
+    <RecordingSpeed>190</RecordingSpeed>
+  </Domain.Lab1.Cd>
+  <Domain.Lab1.Cd>
+    <Diameter>239</Diameter>
+    <Capacity>230</Capacity>
+    <RecordingSpeed>55</RecordingSpeed>
+  </Domain.Lab1.Cd>
+  <Domain.Lab1.Hdd>
+    <Interface>Interfaceee1bdfad-f18b-44d2-ae10-6be0cf7d3bb7</Interface>
+    <Capacity>232</Capacity>
+    <RecordingSpeed>164</RecordingSpeed>
+  </Domain.Lab1.Hdd>
+  <Domain.Lab1.Hdd>
+    <Interface>Interface5c29f900-e23b-4778-bf2f-95abd0f2e4e2</Interface>
+    <Capacity>74</Capacity>
+    <RecordingSpeed>89</RecordingSpeed>
+  </Domain.Lab1.Hdd>
+  <Domain.Lab1.Hdd>
+    <Interface>Interface177b2cdf-401a-42b2-be17-7adf909ff100</Interface>
+    <Capacity>131</Capacity>
+    <RecordingSpeed>233</RecordingSpeed>
+  </Domain.Lab1.Hdd>
+</collection>
