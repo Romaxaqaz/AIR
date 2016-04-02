@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="bcParser.NET">
-      <HintPath>..\..\..\..\bcParser.NET.dll</HintPath>
+      <HintPath>..\..\bcParserNET\Eval\bcParser.NET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,6 +57,10 @@
     </Compile>
     <Compile Include="Methods\Best Sample Algorithm.cs\BestSampleAlgorithm.cs" />
     <Compile Include="Methods\Best Sample Algorithm.cs\ExtendedPoint.cs" />
+    <Compile Include="Methods\HyperCube\HyperCube.cs" />
+    <Compile Include="Methods\HyperCube\Point.cs" />
+    <Compile Include="Methods\HyperCube\Result.cs" />
+    <Compile Include="Methods\HyperCube\Square.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

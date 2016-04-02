@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OPR.lb1;
 using TPL_Lab.Methods.Best_Sample_Algorithm.cs;
 
 namespace TPL_Lab
@@ -23,6 +18,7 @@ namespace TPL_Lab
         {
             InitializeComponent();
             InitializeBSA();
+            label10.Text = string.Empty;
         }
 
         static async Task Display(string message)
@@ -91,5 +87,32 @@ namespace TPL_Lab
         }
         #endregion
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            float x = -1.2f,
+                   y = 1,
+                   sideLength = 30,
+                   minSideLength = 0.000001f,
+                   deltaSideLenth = 1.1f; // reduce side length 
+            int iterationCount = 200,
+                innerPointsCount = 1400; // count of gennereted points 
+
+            SquarePoint startPoint = new SquarePoint(x, y);
+            HyperCube HC = new HyperCube(startPoint, sideLength, minSideLength, deltaSideLenth, iterationCount, innerPointsCount); // Create Hyper cube
+            var task = Task.Run(()=> HC.Calculate(new Progress<int>(UpdateProgessBar)));
+            task.Wait();
+            label10.Text = string.Format("x={0}, y={1}, z={2}", task.Result.Point.x, task.Result.Point.y, task.Result.Z);
+        }
+
+        private void UpdateProgessBar(int value)
+        {
+            progressBar2.Invoke(new Action(() => { progressBar2.Value = value; }));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label10.Text = string.Empty;
+            progressBar2.Value = 0;
+        }
     }
 }

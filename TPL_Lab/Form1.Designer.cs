@@ -55,6 +55,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Start_All = new System.Windows.Forms.Button();
             this.Stop_All_Button = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -224,6 +225,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button4);
@@ -255,6 +257,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Очистить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -264,6 +267,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Старт";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // progressBar2
             // 
@@ -274,10 +278,12 @@
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(9, 71);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 20);
             this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "100*(y - x^2)^2+(1-x)^2";
             // 
             // label7
             // 
@@ -315,6 +321,15 @@
             this.Stop_All_Button.TabIndex = 4;
             this.Stop_All_Button.Text = "Очистить все";
             this.Stop_All_Button.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 188);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "res";
             // 
             // Form1
             // 
@@ -367,6 +382,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Start_All;
         private System.Windows.Forms.Button Stop_All_Button;
+        private System.Windows.Forms.Label label10;
     }
 }
 
